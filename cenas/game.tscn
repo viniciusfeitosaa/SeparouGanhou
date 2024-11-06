@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dabuoiosanxjf"]
 
 [ext_resource type="Texture2D" uid="uid://d16d5lhag4w16" path="res://AssetsSG/istockphoto-1283482350-170667a4-removebg-preview.png" id="1_qapq2"]
-[ext_resource type="Script" path="res://Sprite2D.gd" id="2_3nff5"]
+[ext_resource type="Script" path="res://lixo.gd" id="2_mvksd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hu2rt"]
 size = Vector2(105, 105)
@@ -12,7 +12,7 @@ size = Vector2(105, 105)
 position = Vector2(-0.500002, -1.90735e-06)
 scale = Vector2(0.495192, 0.527363)
 texture = ExtResource("1_qapq2")
-script = ExtResource("2_3nff5")
+script = ExtResource("2_mvksd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lixo"]
 position = Vector2(1.00971, 3.61676e-06)

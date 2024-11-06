@@ -1,9 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqwhy3hemmx20"]
+[gd_scene load_steps=6 format=3 uid="uid://dqwhy3hemmx20"]
 
 [ext_resource type="Script" path="res://Cenas/menu.gd" id="1_yxhiy"]
 [ext_resource type="Texture2D" uid="uid://dbimu3qedsr2d" path="res://Assets/Fundo.jpeg" id="2_agsh5"]
-[ext_resource type="Texture2D" uid="uid://d0hvwk4674kje" path="res://Assets/fundo-botao.png" id="3_7evk4"]
 [ext_resource type="FontFile" uid="uid://cecpqra56q7db" path="res://Fonts/atari-classic-font/AtariClassic-gry3.ttf" id="4_ceghm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2y7l7"]
+bg_color = Color(0.729569, 0.906446, 0.48211, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(1, 1, 1, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_343eo"]
+bg_color = Color(0.31767, 0.685071, 0.487643, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [node name="menu" type="Node2D"]
 script = ExtResource("1_yxhiy")
@@ -13,41 +27,31 @@ position = Vector2(400.61, 383.625)
 scale = Vector2(0.783965, 0.748779)
 texture = ExtResource("2_agsh5")
 
-[node name="FundoJogar" type="Sprite2D" parent="."]
-position = Vector2(230.942, 525)
-scale = Vector2(0.119297, 0.095012)
-texture = ExtResource("3_7evk4")
-
 [node name="Jogar" type="Button" parent="."]
-offset_left = 114.0
-offset_top = 486.0
-offset_right = 347.0
-offset_bottom = 562.0
+offset_left = 121.0
+offset_top = 502.0
+offset_right = 354.0
+offset_bottom = 578.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0.643137, 0.313726, 1)
 theme_override_colors/font_hover_color = Color(0, 0.641637, 0.315657, 1)
 theme_override_fonts/font = ExtResource("4_ceghm")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_2y7l7")
 text = "JOGAR"
-flat = true
-
-[node name="FundoSair" type="Sprite2D" parent="."]
-position = Vector2(553, 524)
-scale = Vector2(0.119297, 0.095012)
-texture = ExtResource("3_7evk4")
 
 [node name="Sair" type="Button" parent="."]
-offset_left = 436.0
-offset_top = 486.0
-offset_right = 669.0
-offset_bottom = 562.0
+offset_left = 441.0
+offset_top = 504.0
+offset_right = 674.0
+offset_bottom = 580.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_ceghm")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_343eo")
 text = "SAIR"
-flat = true
 
 [connection signal="pressed" from="Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="Sair" to="." method="_on_sair_pressed"]
