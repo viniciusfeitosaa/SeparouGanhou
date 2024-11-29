@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbimu3qedsr2d"
-path="res://.godot/imported/fundo.jpeg-d1a43e606076c2290b8d21ba8305cfc0.ctex"
+uid="uid://bl2tr5hv8v0oq"
+path="res://.godot/imported/metal2.png-7d9584daf8562d16478ce74700d8605a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/fundo.jpeg"
-dest_files=["res://.godot/imported/fundo.jpeg-d1a43e606076c2290b8d21ba8305cfc0.ctex"]
+source_file="res://AssetsSG/metal2.png"
+dest_files=["res://.godot/imported/metal2.png-7d9584daf8562d16478ce74700d8605a.ctex"]
 
 [params]
 

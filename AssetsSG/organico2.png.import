@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbimu3qedsr2d"
-path="res://.godot/imported/fundo.jpeg-d1a43e606076c2290b8d21ba8305cfc0.ctex"
+uid="uid://bj3d4islg52a"
+path="res://.godot/imported/organico2.png-f4873baec81b25a7b1123dc953a4ea77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/fundo.jpeg"
-dest_files=["res://.godot/imported/fundo.jpeg-d1a43e606076c2290b8d21ba8305cfc0.ctex"]
+source_file="res://AssetsSG/organico2.png"
+dest_files=["res://.godot/imported/organico2.png-f4873baec81b25a7b1123dc953a4ea77.ctex"]
 
 [params]
 

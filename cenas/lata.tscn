@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba6nxcnob8rdt"]
+
+[ext_resource type="Texture2D" uid="uid://d16d5lhag4w16" path="res://AssetsSG/istockphoto-1283482350-170667a4-removebg-preview.png" id="1_svquk"]
+[ext_resource type="Script" path="res://cenas/lata.gd" id="2_0oltc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgi8q"]
+size = Vector2(98.9999, 95.9998)
+
+[node name="lata" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.500002, -1.90735e-06)
+scale = Vector2(0.495192, 0.527363)
+texture = ExtResource("1_svquk")
+script = ExtResource("2_0oltc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -2)
+shape = SubResource("RectangleShape2D_lgi8q")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1v4bdcs4jamk"]
+
+[ext_resource type="Script" path="res://Lixo/papel1.gd" id="1_w70w5"]
+[ext_resource type="Texture2D" uid="uid://ekojgve4xat3" path="res://AssetsSG/papel1.png" id="1_y7tr2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lspbt"]
+size = Vector2(56, 36)
+
+[node name="papel1" type="CharacterBody2D"]
+position = Vector2(414, -143)
+script = ExtResource("1_w70w5")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.73742, -7.37315)
+scale = Vector2(0.352561, 0.429239)
+texture = ExtResource("1_y7tr2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_lspbt")

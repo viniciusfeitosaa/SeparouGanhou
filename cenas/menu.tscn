@@ -1,19 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqwhy3hemmx20"]
+[gd_scene load_steps=7 format=3 uid="uid://dqwhy3hemmx20"]
 
 [ext_resource type="Script" path="res://Cenas/menu.gd" id="1_yxhiy"]
-[ext_resource type="Texture2D" uid="uid://dbimu3qedsr2d" path="res://Assets/Fundo.jpeg" id="2_agsh5"]
+[ext_resource type="Texture2D" uid="uid://dbimu3qedsr2d" path="res://Assets/fundo.jpeg" id="2_o6e1l"]
+[ext_resource type="AudioStream" uid="uid://dib5kbuxfbfw7" path="res://Assets/menu.wav" id="4_1c650"]
 [ext_resource type="FontFile" uid="uid://cecpqra56q7db" path="res://Fonts/atari-classic-font/AtariClassic-gry3.ttf" id="4_ceghm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2y7l7"]
-bg_color = Color(0.729569, 0.906446, 0.48211, 1)
+bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-shadow_color = Color(1, 1, 1, 0.6)
+shadow_color = Color(1, 1, 1, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_343eo"]
-bg_color = Color(0.31767, 0.685071, 0.487643, 1)
+bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
@@ -23,28 +24,28 @@ corner_radius_bottom_left = 4
 script = ExtResource("1_yxhiy")
 
 [node name="Fundo" type="Sprite2D" parent="."]
-position = Vector2(400.61, 383.625)
-scale = Vector2(0.783965, 0.748779)
-texture = ExtResource("2_agsh5")
+position = Vector2(524.451, 444.762)
+scale = Vector2(1.0206, 0.937966)
+texture = ExtResource("2_o6e1l")
 
 [node name="Jogar" type="Button" parent="."]
-offset_left = 121.0
-offset_top = 502.0
-offset_right = 354.0
-offset_bottom = 578.0
+offset_left = 249.0
+offset_top = 577.0
+offset_right = 482.0
+offset_bottom = 653.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0.643137, 0.313726, 1)
-theme_override_colors/font_hover_color = Color(0, 0.641637, 0.315657, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(2.16588e-06, 0.777935, 0.388177, 1)
 theme_override_fonts/font = ExtResource("4_ceghm")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_2y7l7")
 text = "JOGAR"
 
 [node name="Sair" type="Button" parent="."]
-offset_left = 441.0
-offset_top = 504.0
-offset_right = 674.0
-offset_bottom = 580.0
+offset_left = 569.0
+offset_top = 579.0
+offset_right = 802.0
+offset_bottom = 655.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
@@ -52,6 +53,10 @@ theme_override_fonts/font = ExtResource("4_ceghm")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_343eo")
 text = "SAIR"
+
+[node name="Musica" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_1c650")
+autoplay = true
 
 [connection signal="pressed" from="Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="Sair" to="." method="_on_sair_pressed"]

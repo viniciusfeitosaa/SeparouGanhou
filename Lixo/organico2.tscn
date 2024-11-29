@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cq37cd6b5bpcu"]
+
+[ext_resource type="Texture2D" uid="uid://bj3d4islg52a" path="res://AssetsSG/organico2.png" id="1_34hii"]
+[ext_resource type="Script" path="res://Lixo/organico2.gd" id="1_w6a2t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kgny1"]
+size = Vector2(42, 56)
+
+[node name="organico2" type="CharacterBody2D"]
+position = Vector2(338, -148)
+script = ExtResource("1_w6a2t")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.93399, 0.999975)
+scale = Vector2(0.308327, 0.328358)
+texture = ExtResource("1_34hii")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6, 3)
+shape = SubResource("RectangleShape2D_kgny1")

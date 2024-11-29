@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbimu3qedsr2d"
-path="res://.godot/imported/fundo.jpeg-d1a43e606076c2290b8d21ba8305cfc0.ctex"
+uid="uid://dntyc0u0re8fu"
+path="res://.godot/imported/vidro1.png-00f23795ed3dd76fc1a0da68d28cb518.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/fundo.jpeg"
-dest_files=["res://.godot/imported/fundo.jpeg-d1a43e606076c2290b8d21ba8305cfc0.ctex"]
+source_file="res://AssetsSG/vidro1.png"
+dest_files=["res://.godot/imported/vidro1.png-00f23795ed3dd76fc1a0da68d28cb518.ctex"]
 
 [params]
 

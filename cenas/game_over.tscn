@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://cja2pjwp50bno"]
+
+[ext_resource type="Script" path="res://cenas/game_over.gd" id="1_gvxlo"]
+[ext_resource type="Texture2D" uid="uid://difoop0h8t3uu" path="res://AssetsSG/Game Over screen in 2D pixel art theme of a game about trash (1).jpg" id="2_bbubb"]
+[ext_resource type="FontFile" uid="uid://cecpqra56q7db" path="res://Fonts/atari-classic-font/AtariClassic-gry3.ttf" id="3_nyrtc"]
+[ext_resource type="AudioStream" uid="uid://b4png8y4j0oge" path="res://Assets/sponge-bob-disgusting.mp3" id="4_mwcse"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l45w7"]
+bg_color = Color(0.23087, 0.692962, 0.530481, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_drxie"]
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.6, 0.6, 0.6, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="GameOver" type="Node2D"]
+script = ExtResource("1_gvxlo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(512, 458)
+scale = Vector2(1.00391, 0.900391)
+texture = ExtResource("2_bbubb")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 398.0
+offset_top = 731.0
+offset_right = 650.0
+offset_bottom = 817.0
+theme_override_fonts/font = ExtResource("3_nyrtc")
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxFlat_l45w7")
+text = "Voltar"
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 165.0
+offset_top = 481.0
+offset_right = 867.0
+offset_bottom = 538.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_nyrtc")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_drxie")
+text = "O lixo não foi separado corretamente 
+e a cidade foi tomada, tente novamente!"
+
+[node name="perdeu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_mwcse")
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

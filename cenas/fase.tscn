@@ -1,0 +1,193 @@
+[gd_scene load_steps=23 format=3 uid="uid://dabuoiosanxjf"]
+
+[ext_resource type="Script" path="res://cenas/fase.gd" id="1_430el"]
+[ext_resource type="Texture2D" uid="uid://c5i7i0m8cpwjk" path="res://Assets/fundo-game.jpg" id="2_qq30n"]
+[ext_resource type="Texture2D" uid="uid://cv67sy142p3l1" path="res://Assets/lixeira-vermelho.png" id="3_if01o"]
+[ext_resource type="Texture2D" uid="uid://c68si88arifip" path="res://Assets/lixeira-azul.png" id="4_v3gqm"]
+[ext_resource type="Texture2D" uid="uid://dsh2umn0ea52b" path="res://Assets/lixeira-amarela.png" id="5_8jic0"]
+[ext_resource type="Texture2D" uid="uid://4sajrjev7fsl" path="res://Assets/lixeira-verde.png" id="6_jdesb"]
+[ext_resource type="Texture2D" uid="uid://dw61ewwlbrd48" path="res://Assets/lixeira-marrom.png" id="7_rdye5"]
+[ext_resource type="PackedScene" uid="uid://bycjwgfwjcjdc" path="res://Lixo/metal1.tscn" id="8_rsh3s"]
+[ext_resource type="PackedScene" uid="uid://dgi8gqotjwmhs" path="res://Lixo/metal2.tscn" id="10_dfvkw"]
+[ext_resource type="PackedScene" uid="uid://t83rlv3fef02" path="res://Lixo/vidro1.tscn" id="10_p8qx2"]
+[ext_resource type="PackedScene" uid="uid://c6uyf8n5q1ued" path="res://Lixo/vidro2.tscn" id="12_8v6k6"]
+[ext_resource type="PackedScene" uid="uid://det8akkbog2ve" path="res://Lixo/organico1.tscn" id="13_0fwgv"]
+[ext_resource type="PackedScene" uid="uid://cq37cd6b5bpcu" path="res://Lixo/organico2.tscn" id="14_hwplx"]
+[ext_resource type="PackedScene" uid="uid://d1v4bdcs4jamk" path="res://Lixo/papel1.tscn" id="15_rmjqi"]
+[ext_resource type="PackedScene" uid="uid://bhbl42puo36m3" path="res://Lixo/papel2.tscn" id="16_i3uvv"]
+[ext_resource type="PackedScene" uid="uid://4tiimjw6wbub" path="res://Lixo/plastico1.tscn" id="17_ksq4e"]
+[ext_resource type="PackedScene" uid="uid://bv0hfoghwvdvh" path="res://Lixo/plastico2.tscn" id="18_7ml82"]
+[ext_resource type="FontFile" uid="uid://cecpqra56q7db" path="res://Fonts/atari-classic-font/AtariClassic-gry3.ttf" id="18_kp0x8"]
+[ext_resource type="Texture2D" uid="uid://cgm614nkyah8n" path="res://AssetsSG/coracao_vermelho.png" id="19_ngac7"]
+[ext_resource type="AudioStream" uid="uid://dibsdoywxm5b2" path="res://Assets/ding-sound-effect_2.mp3" id="20_2mhdm"]
+[ext_resource type="AudioStream" uid="uid://bx0oo4kdw4mej" path="res://Assets/wrong_5.mp3" id="21_boamu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wet4n"]
+size = Vector2(110, 20)
+
+[node name="Fase" type="Node2D"]
+script = ExtResource("1_430el")
+
+[node name="Fundo" type="Sprite2D" parent="."]
+position = Vector2(495, 397)
+scale = Vector2(0.5764, 0.783939)
+texture = ExtResource("2_qq30n")
+
+[node name="Lixeiras" type="Node" parent="."]
+
+[node name="Lixeira-azul" type="Area2D" parent="Lixeiras"]
+position = Vector2(300, 784)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lixeiras/Lixeira-azul"]
+position = Vector2(0, -50)
+shape = SubResource("RectangleShape2D_wet4n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Lixeiras/Lixeira-azul"]
+scale = Vector2(5, 5)
+texture = ExtResource("4_v3gqm")
+
+[node name="Lixeira-amarela" type="Area2D" parent="Lixeiras"]
+position = Vector2(500, 784)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lixeiras/Lixeira-amarela"]
+position = Vector2(0, -50)
+shape = SubResource("RectangleShape2D_wet4n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Lixeiras/Lixeira-amarela"]
+scale = Vector2(5, 5)
+texture = ExtResource("5_8jic0")
+
+[node name="Lixeira-verde" type="Area2D" parent="Lixeiras"]
+position = Vector2(700, 784)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lixeiras/Lixeira-verde"]
+position = Vector2(0, -50)
+shape = SubResource("RectangleShape2D_wet4n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Lixeiras/Lixeira-verde"]
+scale = Vector2(5, 5)
+texture = ExtResource("6_jdesb")
+
+[node name="Lixeira-marrom" type="Area2D" parent="Lixeiras"]
+position = Vector2(900, 784)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lixeiras/Lixeira-marrom"]
+position = Vector2(0, -50)
+shape = SubResource("RectangleShape2D_wet4n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Lixeiras/Lixeira-marrom"]
+scale = Vector2(5, 5)
+texture = ExtResource("7_rdye5")
+
+[node name="Lixeira-vermelha" type="Area2D" parent="Lixeiras"]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lixeiras/Lixeira-vermelha"]
+position = Vector2(100, 734)
+shape = SubResource("RectangleShape2D_wet4n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Lixeiras/Lixeira-vermelha"]
+position = Vector2(100, 784)
+scale = Vector2(5, 5)
+texture = ExtResource("3_if01o")
+
+[node name="Lixo" type="Node" parent="."]
+
+[node name="metal1" parent="Lixo" instance=ExtResource("8_rsh3s")]
+
+[node name="metal2" parent="Lixo" instance=ExtResource("10_dfvkw")]
+
+[node name="vidro1" parent="Lixo" instance=ExtResource("10_p8qx2")]
+position = Vector2(171, -147)
+
+[node name="vidro2" parent="Lixo" instance=ExtResource("12_8v6k6")]
+
+[node name="organico1" parent="Lixo" instance=ExtResource("13_0fwgv")]
+
+[node name="organico2" parent="Lixo" instance=ExtResource("14_hwplx")]
+
+[node name="papel1" parent="Lixo" instance=ExtResource("15_rmjqi")]
+
+[node name="papel2" parent="Lixo" instance=ExtResource("16_i3uvv")]
+
+[node name="plastico1" parent="Lixo" instance=ExtResource("17_ksq4e")]
+
+[node name="plastico2" parent="Lixo" instance=ExtResource("18_7ml82")]
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 638.0
+offset_top = 16.0
+offset_right = 700.0
+offset_bottom = 32.0
+scale = Vector2(2.27391, 2.35234)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_kp0x8")
+theme_override_font_sizes/font_size = 13
+
+[node name="PauseButton" type="Button" parent="."]
+offset_left = 17.0
+offset_top = 9.0
+offset_right = 105.0
+offset_bottom = 49.0
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("18_kp0x8")
+text = "Pausar"
+metadata/_edit_group_ = true
+
+[node name="PontosLabel" type="Label" parent="."]
+offset_left = 657.0
+offset_top = 63.0
+offset_right = 814.0
+offset_bottom = 100.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_kp0x8")
+theme_override_font_sizes/font_size = 25
+
+[node name="VidasContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(10, 10)
+offset_left = 703.0
+offset_top = 86.0
+offset_right = 3089.0
+offset_bottom = 560.0
+scale = Vector2(0.09, 0.09)
+size_flags_horizontal = 4
+metadata/_edit_group_ = true
+
+[node name="TextureRect" type="TextureRect" parent="VidasContainer"]
+layout_mode = 2
+texture = ExtResource("19_ngac7")
+
+[node name="TextureRect2" type="TextureRect" parent="VidasContainer"]
+layout_mode = 2
+texture = ExtResource("19_ngac7")
+
+[node name="TextureRect3" type="TextureRect" parent="VidasContainer"]
+layout_mode = 2
+texture = ExtResource("19_ngac7")
+
+[node name="TextureRect4" type="TextureRect" parent="VidasContainer"]
+layout_mode = 2
+texture = ExtResource("19_ngac7")
+
+[node name="TextureRect5" type="TextureRect" parent="VidasContainer"]
+layout_mode = 2
+texture = ExtResource("19_ngac7")
+
+[node name="somAcerto" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("20_2mhdm")
+
+[node name="somErro" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("21_boamu")
+
+[connection signal="body_entered" from="Lixeiras/Lixeira-azul" to="." method="_on_lixeiraazul_body_entered"]
+[connection signal="body_entered" from="Lixeiras/Lixeira-amarela" to="." method="_on_lixeiraamarela_body_entered"]
+[connection signal="body_entered" from="Lixeiras/Lixeira-verde" to="." method="_on_lixeiraverde_body_entered"]
+[connection signal="body_entered" from="Lixeiras/Lixeira-marrom" to="." method="_on_lixeiramarrom_body_entered"]
+[connection signal="body_entered" from="Lixeiras/Lixeira-vermelha" to="." method="_on_lixeiravermelha_body_entered"]
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]

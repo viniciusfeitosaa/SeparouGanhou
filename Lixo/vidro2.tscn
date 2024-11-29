@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6uyf8n5q1ued"]
+
+[ext_resource type="Texture2D" uid="uid://ba0qdgwlygqol" path="res://AssetsSG/vidro2.png" id="1_iyx8o"]
+[ext_resource type="Script" path="res://Lixo/vidro2.gd" id="1_rw18o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3r2k"]
+size = Vector2(27, 76)
+
+[node name="vidro2" type="CharacterBody2D"]
+position = Vector2(221, -142)
+script = ExtResource("1_rw18o")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, -0.500004)
+scale = Vector2(0.555555, 0.524096)
+texture = ExtResource("1_iyx8o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_k3r2k")

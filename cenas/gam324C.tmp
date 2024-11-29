@@ -1,0 +1,51 @@
+[gd_scene load_steps=10 format=3 uid="uid://dabuoiosanxjf"]
+
+[ext_resource type="Script" path="res://cenas/game.gd" id="1_56fk1"]
+[ext_resource type="Texture2D" uid="uid://d16d5lhag4w16" path="res://AssetsSG/istockphoto-1283482350-170667a4-removebg-preview.png" id="1_qapq2"]
+[ext_resource type="Script" path="res://lixo.gd" id="2_mvksd"]
+[ext_resource type="Texture2D" uid="uid://c5i7i0m8cpwjk" path="res://Assets/fundo-game.jpg" id="2_u6oom"]
+[ext_resource type="Texture2D" uid="uid://cv67sy142p3l1" path="res://Assets/lixeira-vermelho.png" id="3_8d050"]
+[ext_resource type="Script" path="res://cenas/Lixeira-vermelha.gd" id="3_wltiq"]
+[ext_resource type="Script" path="res://cenas/Lixos.gd" id="4_ltig7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wet4n"]
+size = Vector2(110, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_voufl"]
+size = Vector2(98.9999, 95.9998)
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_56fk1")
+
+[node name="Fundo" type="Sprite2D" parent="."]
+position = Vector2(483, 392)
+scale = Vector2(0.614143, 0.586579)
+texture = ExtResource("2_u6oom")
+
+[node name="Lixeira-vermelha" type="CharacterBody2D" parent="."]
+position = Vector2(120, 650)
+script = ExtResource("3_wltiq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Lixeira-vermelha"]
+scale = Vector2(5, 5)
+texture = ExtResource("3_8d050")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lixeira-vermelha"]
+position = Vector2(0, -50)
+shape = SubResource("RectangleShape2D_wet4n")
+
+[node name="Lixos" type="Node" parent="."]
+script = ExtResource("4_ltig7")
+
+[node name="lata" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="lata"]
+position = Vector2(-0.500002, -1.90735e-06)
+scale = Vector2(0.495192, 0.527363)
+texture = ExtResource("1_qapq2")
+script = ExtResource("2_mvksd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lata"]
+position = Vector2(1.5, -2)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_voufl")

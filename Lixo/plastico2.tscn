@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bv0hfoghwvdvh"]
+
+[ext_resource type="Script" path="res://Lixo/plastico2.gd" id="1_o7a05"]
+[ext_resource type="Texture2D" uid="uid://c1gs608q1nmtb" path="res://AssetsSG/plastico2.png" id="1_o7pak"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3i3er"]
+size = Vector2(32, 72)
+
+[node name="plastico2" type="CharacterBody2D"]
+position = Vector2(638, -149)
+script = ExtResource("1_o7a05")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.14219, -1.9254)
+scale = Vector2(0.34922, 0.356487)
+texture = ExtResource("1_o7pak")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_3i3er")

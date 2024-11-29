@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bycjwgfwjcjdc"]
+
+[ext_resource type="Texture2D" uid="uid://d16d5lhag4w16" path="res://AssetsSG/metal1.png" id="1_svquk"]
+[ext_resource type="Script" path="res://Lixo/metal1.gd" id="2_0oltc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_voufl"]
+size = Vector2(47, 48)
+
+[node name="metal1" type="CharacterBody2D"]
+position = Vector2(44, -141)
+script = ExtResource("2_0oltc")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.07288e-05, 1)
+scale = Vector2(0.240385, 0.258706)
+texture = ExtResource("1_svquk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_voufl")
